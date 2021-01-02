@@ -1,0 +1,26 @@
+{
+    "name": "ringa/x-powered-by",
+    "description": "PHP middleware to append 'X-Powered-By' headers on PSR-7 responses.",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "psr/http-message": "^1.0",
+        "psr/http-server-handler": "^1.0",
+        "psr/http-server-middleware": "^1.0"
+    },
+    "require-dev": {
+        "guzzlehttp/psr7": "^1.7",
+        "ringa/dummy-request-handler": "^1.0",
+        "phpunit/phpunit": "^9",
+        "phpstan/phpstan": "^0.12.64"
+    },
+    "autoload": {
+        "psr-4": {
+            "Leo\\Middlewares\\": "src/"
+        }
+    },
+    "scripts": {
+        "unit-test": ["vendor/bin/phpunit -c phpunit.xml"],
+        "analyse": ["vendor/bin/phpstan analyse src tests --level 5"]
+    }
+}
